@@ -1,0 +1,10 @@
+<ol>
+  {% for artist in artistas %} 
+    <li>{{artist.nome}}
+  
+      <a href="/tasks/edit/{{artist.id}}">Editar</a>
+      <a href="/tasks/delete/{{artist.id}}">Remover</a>
+  
+    </li>
+  {% endfor %}
+</ol>

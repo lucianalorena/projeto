@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Luciana Lorena Freitas</title>
+  
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <div style="text-align:center">
+
+  <p class = "titulo-azul"><br><font size="4"><b></br>O que a cor azul significa para mim?</p></font><br/></b>
+  <p class = "paragrafo-azul">Eu amo a cor azul! Ela tem um poder incrível de acalmar a minha mente e me trazer paz interior. Me sinto como se estivesse em um lugar calmo e tranquilo, longe das preocupações do mundo. Além disso, ela me lembra muito da natureza, especialmente do céu e do mar.
+
+O azul do céu me encanta, mas o azul do mar é apaixonante.  Quando olho para essas cores, sinto como se estivesse conectada à natureza de uma maneira especial.
+
+Enfim, é uma cor que me ajuda a encontrar o equilíbrio emocional e me faz sentir mais em paz comigo mesma e com o mundo ao meu redor.</p></div>
+  
+ <p class= "lista-n-ordenada"><b>Meus lugares preferidos para relaxar:</b>
+  <ul>
+    <li>Praias</li>
+    <li>Cachoeiras</li>
+    <li>Trilhas</li>
+    <li>Parques</li></p>
+  </ul>
+
+   <p class= "lista-ordenada"><b>Trilhas que eu mais gostei de fazer:</b></p>
+  <ol>
+    <li>Lagoa Esmeralda - Ushuaia</li>
+    <li>Fitz Roy - El Calafate</li>
+    <li>Pedra da Gávea - Rio de Janeiro</li>
+    <li>Long Shot - Colorado</li>
+  </ol>
+
+  <table border="1">
+    <tr>
+        <td>Nome da cachoeira</td>
+        <td>Já fui?</td>
+    </tr>
+    <tr>
+        <td>Cachoeira dos Treze</td>
+        <td>Não</td>
+    </tr>
+    <tr>
+        <td>Cachoeira Véu da Noiva</td>
+        <td>Não</td>
+    </tr>
+    <tr>
+        <td>Cachoeira dos Primatas</td>
+        <td>Sim</td>
+    </tr>
+    <tr>
+        <td>Cachoeira do Palmital</td>
+        <td>Sim</td>
+    </tr>
+    <tr>
+        <td>Cachoeira do Índio</td>
+        <td>Sim</td>
+    </tr>
+</table>
+
+  <p class= "texto-imagem">Essa é uma foto da trilha que mais gostei de fazer... Depois de 6 horas de caminhada, finalmente chegamos à Lagoa Esmeralda!</p>
+  
+  <img width= "300px"src="https://quantocustaviajar.com/blog/wp-content/uploads/2022/04/25064238823_f3aeda8c98_c.jpg">
+
+ <p><a href="https://followthecolours.com.br/azul-50-curiosidades-interessantissimas-que-voce-nao-sabia-sobre-a-cor/#:~:text=Ele%20simboliza%20a%20paz%2C%20a,acalmar%20e%20relaxar%20as%20pessoas." target="_blank">Clique aqui para descobrir mais sobre a cor azul!</a><br></p>
+
+<p>Lista de tarefas:</p>
+  
+<ul>
+{% for task in tasks %}
+<li>{{task.title}}
+  
+  <a href="/tasks/edit/{{task.id}}">Editar</a>
+  <a href="/tasks/delete/{{task.id}}">Remover</a>
+
+</li>
+{% endfor %}
+</ul>
+
+<p>Artistas favoritos:</p>
+<ol>
+{% for artist in artistas %} 
+<li>{{artist.nome}}
+  
+<a href="/musicians/edit/{{artist.id}}">Editar</a>
+<a href="/musicians/delete/{{artist.id}}">Remover</a>
+  
+</li>
+{% endfor %}
+</ol>
+  
+</body>
+
+</html>

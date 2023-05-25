@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.titulo-azul {
+  font-family: 'Roboto';
+  color: #14cbf0;
+}
+
+.paragrafo-azul {
+  color: #3621a1;
+}
+
+.lista-n-ordenada{
+  color: #8209ae;
+}
+
+.lista-ordenada{
+  color: #ae0982;
+}
+
+.texto-imagem {
+  font-family: 'Alkatra', cursive;
+}

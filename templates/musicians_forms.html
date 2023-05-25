@@ -1,0 +1,20 @@
+<form method="post">
+{% csrf_token %}
+<div>
+  <label>Nome</label>
+  <input type="text" name="nome" value="{{ artist.nome }}">
+</div>
+  
+<div>
+  <label>Sobrenome</label>
+  <input type="text" name="sobrenome" value="{{ artist.sobrenome }}">
+</div>
+
+<div>
+  <label>Instrumento</label>
+  <input type="text" name="instrumento" value="{{ artist.instrumento }}">
+</div>
+  
+  <input type="submit">
+  
+</form>
